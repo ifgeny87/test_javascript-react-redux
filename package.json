@@ -1,0 +1,26 @@
+{
+  "name": "test_javascript-react-redux",
+  "version": "1.0.0",
+  "description": "Testing React.js + Redux (+Webpack)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifgeny87/test_javascript-react-redux.git"
+  },
+  "author": "Makarov ifgeny87@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ifgeny87/test_javascript-react-redux/issues"
+  },
+  "homepage": "https://github.com/ifgeny87/test_javascript-react-redux#readme",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.1"
+  }
+}
