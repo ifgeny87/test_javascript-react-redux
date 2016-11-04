@@ -2,11 +2,14 @@ import React, {Component, PropTypes} from 'react';
 
 export default  class Page extends Component {
     onYearClick(e) {
-        this.props.setYear(+e.target.innerText);
+        this.props.getPhotos(+e.target.innerText);
     }
 
     render() {
-        const {year, photos}  = this.props;
+        const {year, photos, fetching}  = this.props;
+        let block = (fetching
+            ? <p>Loading...</p>
+            : photos.map((v, key) => <p key={key}>Типа фотка {v} {year} года</p>));
         return <div>
             <p>
                 {[2016, 2015, 2014].map((v, index) =>
@@ -14,7 +17,7 @@ export default  class Page extends Component {
                 )}
             </p>
             <h3>{year} год</h3>
-            <p>У тебя {photos.length} фото за {year} год</p>
+            {block}
         </div>
     }
 }
@@ -23,5 +26,6 @@ export default  class Page extends Component {
 Page.propTypes = {
     year: PropTypes.number.isRequired,
     photos: PropTypes.array.isRequired,
-    setYear: PropTypes.func.isRequired
+    fetching: PropTypes.bool.isRequired,
+    getPhotos: PropTypes.func.isRequired
 };
