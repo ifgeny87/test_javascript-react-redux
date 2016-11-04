@@ -4,6 +4,10 @@ import {render}  from 'react-dom'
 import App from './containers/App'
 
 render(
-    <App />,
+    <div style={{color: 'blue'}}>
+        <App />
+    </div>,
     document.getElementById('root')
-)
+);
+
+module.hot.accept();

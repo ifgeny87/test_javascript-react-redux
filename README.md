@@ -21,3 +21,11 @@
 - `webpack.optimize.OccurenceOrderPlugin`
 - `webpack.HotModuleReplacementPlugin`
 - `webpack.NoErrorsPlugin`
+
+## Как работает ESLint
+
+ESLint появился в третьем коммите.
+
+Наглядный пример как это работает:
+
+![image](images/003.gif)
